@@ -133,6 +133,7 @@ dist
 .pnp.*
 local.settings.json
 
+
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
@@ -141,5 +142,6 @@ local.settings.json
 
 # SvelteKit build / generate output
 .svelte-kit
+venv/
 
 # End of https://www.toptal.com/developers/gitignore/api/node
