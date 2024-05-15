@@ -17,38 +17,48 @@
 <body>
   <div class="header">
     <img src="images/gembreda-square-red.png" alt="Logo" width="32" height="32" />
-    <span class="header__title">Gemeente Breda</span>
+    <span class="header__title">  Gemeente Breda</span>
 
     <ul class="menu-items">
     </ul>
   </div>
 
-  <div class="title">
-    <h1>Stel je vraag en misschien krijg je antwoord</h1>
-  </div>
-
   <div class="main">
     <div class="main-block">
-      <h2>Hier heb je een aantal voorbeeld vragen:</h2>
+      <h1>Meet your cityhost</h1>
+      <h2>Here are some things I can assist you with...</h2>
 
       <div class="suggested-questions">
-        <button onclick="window.speak(`Waar mag ik werken?`)">
-          Waar mag ik werken?
+        <button onclick="window.speak(`W czym może mi pomóc gmina?`)">
+          Polish: W czym może mi pomóc gmina?
         </button>
 
-        <button onclick="window.speak(`Wie is de Baas van deze stad?`)">
-          Wie is de Baas van deze stad?
+        <button onclick="window.speak(`Cu ce mă poate ajuta municipalitatea?`)">
+          Romanian: Cu ce mă poate ajuta municipalitatea?
         </button>
 
-        <button onclick="window.speak(`Waarom moet ik tegen AI praten?`)">
-          Waarom moet ik tegen AI praten?
+        <button onclick="window.speak(`Comment la municipalité peut-elle m'aider?`)">
+          French: Comment la municipalité peut-elle m'aider?
         </button>
 
-        <button onclick="window.speak(`Ile kosztuje paszport?`)">
-          Ile kosztuje paszport??
+        <button onclick="window.speak(`Waar kan de gemeente mij mee helpen?`)">
+          Dutch: Waar kan de gemeente mij mee helpen?
+        </button>
+        
+        <button onclick="window.speak(`How can the municipality help me?`)">
+          English: How can the municipality help me?
         </button>
       </div>
-      <div>
+    </div>
+
+    <div class="avatar-block">
+      <div class="avatar">
+        <div id="remoteVideo">
+        </div>
+        <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
+        <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
+      </div>
+      <div class="avatar-record-card">
         <fluent-card class="record-card">
           <div class="outerbutton">
             <button id="startRecording" onclick="window.startRecording()" class="round-button">
@@ -60,15 +70,6 @@
             Press the mic to start talking
           </label>
         </fluent-card>
-      </div>
-    </div>
-
-    <div class="avatar-block">
-      <div class="avatar-block-bottom">
-        <div id="remoteVideo">
-        </div>
-        <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
-        <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
       </div>
     </div>
 
