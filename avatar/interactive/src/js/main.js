@@ -204,9 +204,10 @@ window.startSession = () => {
 }
 
 async function greeting() {
-  addToConversationHistory("Hello, long story, nice and short. How can I help you?", "light")
+  welcomeMessage = "Welcome to Breda, a place full of new ideas where you can grow and share your talents. Breda is a city that is alive, Here you can find more information about working and living in the Netherlands."
+  addToConversationHistory(welcomeMessage, "light")
 
-  let spokenText = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='en-US-JennyNeural'>Hello, my name is Lisa. How can I help you?</voice></speak>"
+  let spokenText = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='en-US-JennyNeural'>" + welcomeMessage + "</voice></speak>"
   avatarSynthesizer.speakSsmlAsync(spokenText, (result) => {
     if (result.reason === SpeechSDK.ResultReason.SynthesizingAudioCompleted) {
       console.log("Speech synthesized to speaker for text [ " + spokenText + " ]. Result ID: " + result.resultId)
