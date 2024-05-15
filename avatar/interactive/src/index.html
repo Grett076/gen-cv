@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Trailblazers Outdoor Gear</title>
+  <title>Gemeente Breda - Work in NL</title>
 
   <link href="./css/styles.css" rel="stylesheet" />
 
@@ -16,65 +16,60 @@
 
 <body>
   <div class="header">
-    <img src="images/Microsoft.png" alt="Logo" width="32" height="32" />
-    <span class="header__title">Trailblazers Outdoor Gear</span>
+    <img src="images/gembreda-square-red.png" alt="Logo" width="32" height="32" />
+    <span class="header__title">Gemeente Breda</span>
 
     <ul class="menu-items">
-      <li>HIKE</li>
-      <li>CAMP</li>
-      <li>CLIMB</li>
-      <li>CYCLE</li>
-      <li>SNOW</li>
-      <li>PADDLE</li>
-      <li>YOGA</li>
-      <li>CART (0)</li>
     </ul>
   </div>
 
   <div class="title">
-    <h1>Shop Easily With Talking Avatar</h1>
+    <h1>Stel je vraag en misschien krijg je antwoord</h1>
   </div>
 
   <div class="main">
     <div class="main-block">
-      <h2>Here are some things Talking Avatar can help you with:</h2>
+      <h2>Hier heb je een aantal voorbeeld vragen:</h2>
 
       <div class="suggested-questions">
-        <button onclick="window.speak(`What is the warrenty for women's hiking boots?`)">
-          What is the warrenty for women's hiking boots?
+        <button onclick="window.speak(`Waar mag ik werken?`)">
+          Waar mag ik werken?
         </button>
 
-        <button onclick="window.speak(`Do you have a tent for two people?`)">
-          Do you have a tent for two people?
+        <button onclick="window.speak(`Wie is de Baas van deze stad?`)">
+          Wie is de Baas van deze stad?
         </button>
 
-        <button onclick="window.speak(`How many bonus points do I have?`)">
-          How many bonus points do I have?
+        <button onclick="window.speak(`Waarom moet ik tegen AI praten?`)">
+          Waarom moet ik tegen AI praten?
         </button>
 
-        <button onclick="window.speak(`When will my order arrive?`)">
-          When will my order arrive?
+        <button onclick="window.speak(`Ile kosztuje paszport?`)">
+          Ile kosztuje paszport??
         </button>
+      </div>
+      <div>
+        <fluent-card class="record-card">
+          <div class="outerbutton">
+            <button id="startRecording" onclick="window.startRecording()" class="round-button">
+              <i id="buttonIcon" class="fas fa-microphone"></i>
+            </button>
+          </div>
+
+          <label id="spokenText" for="spokenText">
+            Press the mic to start talking
+          </label>
+        </fluent-card>
       </div>
     </div>
 
     <div class="avatar-block">
-      <div id="remoteVideo">
-      </div>
-      <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
-      <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
-      
-      <fluent-card class="record-card">
-        <div class="outerbutton">
-          <button id="startRecording" onclick="window.startRecording()" class="round-button">
-            <i id="buttonIcon" class="fas fa-microphone"></i>
-          </button>
+      <div class="avatar-block-bottom">
+        <div id="remoteVideo">
         </div>
-
-        <label id="spokenText" for="spokenText">
-          Press the mic to start talking
-        </label>
-      </fluent-card>
+        <canvas id="canvas" width="720" height="1080" style="background-color: transparent;" hidden="hidden"></canvas>
+        <canvas id="tmpCanvas" width="720" height="1080" hidden="hidden"></canvas>
+      </div>
     </div>
 
     <div class="main-block">
@@ -85,13 +80,16 @@
   <div id="loginOverlay">
     <div id="gradientOverlay">
       <div class="loginCard">
-        <div class="loginCard__header">Login</div>
+        <div class="loginCard__header">
+          <img src="images/gembreda-square-red.png" alt="Logo" width="32" height="32" />
+          Meet your city host!
+        </div>
 
-        <fluent-text-field appearance="outline" placeholder="user@email.com">Username</fluent-text-field>
-        <fluent-text-field appearance="outline" placeholder="****************">Password</fluent-text-field>
+        <!-- <fluent-text-field appearance="outline" placeholder="user@email.com">Username</fluent-text-field>
+        <fluent-text-field appearance="outline" placeholder="****************">Password</fluent-text-field> -->
 
         <button id="playVideo" onclick="window.startSession()">
-          <span id="playVideo__text" class="playVideo__text">Login</span>
+          <span id="playVideo__text" class="playVideo__text">Start</span>
         </button>
       </div>
     </div>

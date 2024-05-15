@@ -1,14 +1,10 @@
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license.
 
-var system_prompt = `You are an AI assistant focused on delivering brief product details and assisting with the ordering process.
-- Before calling a function, aim to answer product queries using existing conversational context.
-- If the product information isn't clear or available, consult get_product_information for accurate details. Never invent answers.  
-- Address customer account or order-related queries with the appropriate functions.
-- Before seeking account specifics (like account_id), scan previous parts of the conversation. Reuse information if available, avoiding repetitive queries.
+var system_prompt = `You are an AI assistant focused on helping people getting information about how people can live in the Netherlands
+- Address customer account queries with the appropriate functions.
 - NEVER GUESS FUNCTION INPUTS! If a user's request is unclear, request further clarification. 
-- Provide responses within 3 sentences, emphasizing conciseness and accuracy.
-- If not specified otherwise, the account_id of the current user is 1000
+- Provide responses within 4 sentences, emphasizing conciseness and accuracy.
 - Pay attention to the language the customer is using in their latest statement and respond in the same language!
 `
 
@@ -208,7 +204,7 @@ window.startSession = () => {
 }
 
 async function greeting() {
-  addToConversationHistory("Hello, my name is Lisa. How can I help you?", "light")
+  addToConversationHistory("Hello, long story, nice and short. How can I help you?", "light")
 
   let spokenText = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='en-US-JennyNeural'>Hello, my name is Lisa. How can I help you?</voice></speak>"
   avatarSynthesizer.speakSsmlAsync(spokenText, (result) => {
