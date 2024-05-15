@@ -16,18 +16,16 @@
 
 <body>
   <div class="header">
-    <img src="images/gembreda-square-red.png" alt="Logo" width="32" height="32" />
-    <span class="header__title">  Gemeente Breda</span>
-
     <ul class="menu-items">
     </ul>
   </div>
 
   <div class="main">
     <div class="main-block">
-      <h1>Meet your cityhost</h1>
-      <h2>Here are some things I can assist you with...</h2>
-
+      <div class="main-welcome">
+        <h1>Meet your cityhost</h1>
+        <h2>Here are some things I can assist you with...</h2>
+      </div>
       <div class="suggested-questions">
         <button onclick="window.speak(`W czym może mi pomóc gmina?`)">
           Polish: W czym może mi pomóc gmina?
@@ -44,10 +42,13 @@
         <button onclick="window.speak(`Waar kan de gemeente mij mee helpen?`)">
           Dutch: Waar kan de gemeente mij mee helpen?
         </button>
-        
+
         <button onclick="window.speak(`How can the municipality help me?`)">
           English: How can the municipality help me?
         </button>
+      </div>
+      <div class="main-logo">
+        <img src="images/gembreda-square-white.png" alt="Logo" width="32" height="32" /> Gemeente Breda
       </div>
     </div>
 
@@ -82,13 +83,24 @@
     <div id="gradientOverlay">
       <div class="loginCard">
         <div class="loginCard__header">
-          <img src="images/gembreda-square-red.png" alt="Logo" width="32" height="32" />
-          Meet your city host!
+          Welkom bij Breda Unites
         </div>
-
-        <!-- <fluent-text-field appearance="outline" placeholder="user@email.com">Username</fluent-text-field>
-        <fluent-text-field appearance="outline" placeholder="****************">Password</fluent-text-field> -->
-
+        <p>Dit project is ontstaan vanuit de behoefte om informatie toegankelijk te maken voor iedereen, ongeacht
+        digitale- of taalvaardigheden. Doormiddel van innovatie onderzoeken we op basis van diverse prototypes hoe we
+        hier invulling aan kunnen geven.</p>
+        <strong>Concept: Een City Host voor arbeidsmigranten in Nederland</strong>
+        <p>We willen dat arbeidsmigranten zich welkom en geïnformeerd voelen in Nederland, en dat ze weten waar ze
+        terecht kunnen voor hulp of advies. We geloven dat dit bijdraagt aan een betere integratie en een eerlijkere
+        arbeidsmarkt.</p>        
+        <p>Als je komt werken en wonen in Nederland komt er veel op je af. Deze City Host helpt je bij de uitleg over je
+        rechten en plichten, wat je moet regelen en welke afspraken je moet maken. Zo word je geholpen om hier veilig,
+        gezond en prettig te kunnen wonen en werken. Je kunt de informatie lezen in verschillende talen of luisteren
+        naar een audioversie.</p>        
+        <p>Dit initiatief maakt onderdeel uit van Brabant Migratie Informatie Punt (BMIP). De Provincie Noord-Brabant
+        wordt de proeftuin voor de landelijke vorm van informatievoorziening en dienstverlening voor arbeidsmigranten.
+        In de pilot wordt geëxperimenteerd met verschillende vormen van dienstverlening. De resultaten van de pilot in
+        Noord-Brabant zullen door de provincie en het Rijk gezamenlijk worden geëvalueerd. De opbrengsten kunnen de
+        volgende stap zijn naar een landelijke uitrol van een uniform model</p>
         <button id="playVideo" onclick="window.startSession()">
           <span id="playVideo__text" class="playVideo__text">Start</span>
         </button>
